@@ -44,14 +44,12 @@
       </table>
     </section>
 
-    <!-- Sección de comentarios -->
     <section class="comment-section">
       <h2>Leave a Comment</h2>
       <textarea id="commentInput" placeholder="Write your comment here..."></textarea>
       <button onclick="addComment()">Post Comment</button>
 
       <div id="commentsContainer">
-        <!-- Aquí se añadirán los comentarios -->
       </div>
     </section>
 
@@ -68,7 +66,7 @@
         commentDiv.className = 'comment';
         commentDiv.textContent = commentText;
         commentsContainer.appendChild(commentDiv);
-        commentInput.value = ''; // Limpiar el cuadro de texto
+        commentInput.value = '';
       } else {
         alert('Please write a comment before posting.');
       }
