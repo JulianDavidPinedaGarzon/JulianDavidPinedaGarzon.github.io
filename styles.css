@@ -72,6 +72,16 @@ tbody tr:nth-child(odd) {
   margin-top: 20px;
 }
 
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;  
+  border: 3px solid #3498db;
+  display: block;
+  margin: 20px auto;
+}
+
 @media (max-width: 600px) {
   body {
     padding: 10px;
@@ -130,7 +140,6 @@ button:hover {
   line-height: 1.5;
 }
 
-/* Comentarios responsivos */
 @media (max-width: 600px) {
   textarea {
     height: 80px;
