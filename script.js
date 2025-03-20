@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
   function fetchNews() {
-    const apiKey = "c355efb1d3f4460499fcec2bda73b016"; // Reemplaza con tu clave de API
-    const category = "sports"; // Puedes cambiar la categoría
+    const apiKey = "c355efb1d3f4460499fcec2bda73b016";
+    const category = "sports";
     const url = `https://newsapi.org/v2/top-headlines?category=${category}&apiKey=${apiKey}`;
   
     fetch(url)
