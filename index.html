@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lab 01</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="container">
     <h1>Julián David Pineda Garzón</h1>
     <img src="messi.jpg" alt="Julián Pineda" class="profile-img">
-    <p><strong>Major:</strong> Ingeniería Civil en Ciencias de la Computación </p>
+    <p><strong>Major:</strong> Ingeniería Civil en Ciencias de la Computación</p>
     <p><strong>Year of University Enrollment:</strong> 2022</p>
-    <p><a href="https://github.com/JULIANDAVIDPINEDAGARZON" target="_blank">Github</a></p>
+    <p><a href="https://github.com/JULIANDAVIDPINEDAGARZON" target="_blank">GitHub</a></p>
 
     <section class="summary">
       <h2>About Me</h2>
@@ -29,16 +30,16 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>Python</td><td>Advance</td></tr>
-          <tr><td>C</td><td>Advance</td></tr>
-          <tr><td>C++</td><td>Advance</td></tr>
+          <tr><td>Python</td><td>Advanced</td></tr>
+          <tr><td>C</td><td>Advanced</td></tr>
+          <tr><td>C++</td><td>Advanced</td></tr>
           <tr><td>JavaScript</td><td>Basic</td></tr>
           <tr><td>HTML/CSS</td><td>Basic</td></tr>
           <tr><td>Git</td><td>Basic</td></tr>
           <tr><td>Excel</td><td>Basic</td></tr>
-          <tr><td>SQL</td><td>Advance</td></tr>
+          <tr><td>SQL</td><td>Advanced</td></tr>
           <tr><td>Ruby</td><td>Basic</td></tr>
-          <tr><td>English</td><td>Advance</td></tr>
+          <tr><td>English</td><td>Advanced</td></tr>
           <tr><td>Spanish</td><td>Native</td></tr>
         </tbody>
       </table>
@@ -47,31 +48,40 @@
     <section class="comment-section">
       <h2>Leave a Comment</h2>
       <textarea id="commentInput" placeholder="Write your comment here..."></textarea>
-      <button onclick="addComment()">Post Comment</button>
-
-      <div id="commentsContainer">
-      </div>
+      <button id="postComment">Post Comment</button>
+      <div id="commentsContainer"></div>
     </section>
 
+    <div class="card mb-3">
+      <img src="messi.jpg" class="card-img-top" alt="1">
+      <div class="card-body">Lionel Andres Messi Cuccitini</h5>
+        <p class="card-text">The best player of all time</p>
+      </div>
+    </div>
+
+    <div class="card mb-3">
+      <img src="FCB.jpg" class="card-img-top" alt="2">
+      <div class="card-body">
+        <h5 class="card-title">FC Barcelona</h5>
+        <p class="card-text">This is my favorite football team</p>
+      </div>
+    </div>
+
+    <div class="card mb-3">
+      <img src="fcf.jpg" class="card-img-top" alt="3">
+      <div class="card-body">
+        <h5 class="card-title">FCF</h5>
+        <p class="card-text">This is my national football team</p>
+      </div>
+    </div>
+
+    <section class="news-section">
+      <h2>Latest News</h2>
+      <button id="fetchNewsBtn">Load News</button>
+      <div id="newsContainer"></div>
+    </section>
   </div>
 
-  <script>
-    function addComment() {
-      const commentInput = document.getElementById('commentInput');
-      const commentsContainer = document.getElementById('commentsContainer');
-      
-      const commentText = commentInput.value.trim();
-      if (commentText !== '') {
-        const commentDiv = document.createElement('div');
-        commentDiv.className = 'comment';
-        commentDiv.textContent = commentText;
-        commentsContainer.appendChild(commentDiv);
-        commentInput.value = '';
-      } else {
-        alert('Please write a comment before posting.');
-      }
-    }
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
