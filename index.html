@@ -4,84 +4,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lab 01</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
 </head>
 <body>
-  <div class="container">
-    <h1>Julián David Pineda Garzón</h1>
-    <img src="gohan.jpeg" alt="Julián Pineda" class="profile-img">
-    <p><strong>Major:</strong> Ingeniería Civil en Ciencias de la Computación</p>
-    <p><strong>Year of University Enrollment:</strong> 2022</p>
-    <p><a href="https://github.com/JULIANDAVIDPINEDAGARZON" target="_blank">GitHub</a></p>
+  <div class="container mt-4">
+    <div class="row">
+      <!-- Columna de perfil -->
+      <div class="col-md-3 text-center">
+        <h1>Julián David Pineda Garzón</h1>
+        <img src="gohan.jpeg" alt="Julián Pineda" class="profile-img img-fluid rounded-circle border border-primary" style="width: 150px; height: 150px;">
+        <p><strong>Major:</strong> Ingeniería Civil en Ciencias de la Computación</p>
+        <p><strong>Year of University Enrollment:</strong> 2022</p>
+        <p><a href="https://github.com/JULIANDAVIDPINEDAGARZON" target="_blank">GitHub</a></p>
+      </div>
+      
+      <!-- Columna de información y comentarios -->
+      <div class="col-md-6">
+        <section class="summary">
+          <h2>About Me</h2>
+          <p>I am a computer science student passionate about web development, artificial intelligence, and data science. I enjoy learning new technologies and working on creative projects that challenge my skills.</p>
+        </section>
 
-    <section class="summary">
-      <h2>About Me</h2>
-      <p>I am a computer science student passionate about web development, artificial intelligence, and data science. I enjoy learning new technologies and working on creative projects that challenge my skills.</p>
-    </section>
+        <section class="skills-section">
+          <h2>Skills</h2>
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>Skill</th>
+                <th>Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Python</td><td>Advanced</td></tr>
+              <tr><td>C</td><td>Advanced</td></tr>
+              <tr><td>C++</td><td>Advanced</td></tr>
+              <tr><td>JavaScript</td><td>Basic</td></tr>
+              <tr><td>HTML/CSS</td><td>Basic</td></tr>
+              <tr><td>Git</td><td>Basic</td></tr>
+              <tr><td>Excel</td><td>Basic</td></tr>
+              <tr><td>SQL</td><td>Advanced</td></tr>
+              <tr><td>Ruby</td><td>Basic</td></tr>
+              <tr><td>English</td><td>Advanced</td></tr>
+              <tr><td>Spanish</td><td>Native</td></tr>
+            </tbody>
+          </table>
+        </section>
 
-    <section class="skills-section">
-      <h2>Skills</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Skill</th>
-            <th>Level</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Python</td><td>Advanced</td></tr>
-          <tr><td>C</td><td>Advanced</td></tr>
-          <tr><td>C++</td><td>Advanced</td></tr>
-          <tr><td>JavaScript</td><td>Basic</td></tr>
-          <tr><td>HTML/CSS</td><td>Basic</td></tr>
-          <tr><td>Git</td><td>Basic</td></tr>
-          <tr><td>Excel</td><td>Basic</td></tr>
-          <tr><td>SQL</td><td>Advanced</td></tr>
-          <tr><td>Ruby</td><td>Basic</td></tr>
-          <tr><td>English</td><td>Advanced</td></tr>
-          <tr><td>Spanish</td><td>Native</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="comment-section">
-      <h2>Leave a Comment</h2>
-      <textarea id="commentInput" placeholder="Write your comment here..."></textarea>
-      <button id="postComment">Post Comment</button>
-      <div id="commentsContainer"></div>
-    </section>
-
-    <div class="card mb-3">
-      <img src="messi.jpg" class="card-img-top" alt="1">
-      <div class="card-body">Lionel Andres Messi Cuccitini</h5>
-        <p class="card-text">The best player of all time</p>
+        <section class="comment-section mt-4">
+          <h2>Leave a Comment</h2>
+          <textarea id="commentInput" class="form-control" placeholder="Write your comment here..."></textarea>
+          <button id="postComment" class="btn btn-primary mt-2">Post Comment</button>
+          <div id="commentsContainer"></div>
+        </section>
+      </div>
+      
+      <!-- Columna de tarjetas y noticias -->
+      <div class="col-md-3">
+        <h2>Latest News</h2>
+        <button id="fetchNewsBtn" class="btn btn-primary mb-3">Load News</button>
+        <div class="row row-cols-1 g-3">
+          <div class="col">
+            <div class="card">
+              <img src="messi.jpg" class="card-img-top" alt="Messi">
+              <div class="card-body">
+                <p class="card-text text-center">Lionel Andres Messi Cuccitini</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="FCB.jpg" class="card-img-top" alt="FC Barcelona">
+              <div class="card-body">
+                <p class="card-text text-center">FC Barcelona - My favorite football team</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="fcf.jpg" class="card-img-top" alt="FCF">
+              <div class="card-body">
+                <p class="card-text text-center">FCF - My national football team</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="card mb-3">
-      <img src="FCB.jpg" class="card-img-top" alt="2">
-      <div class="card-body">
-        <h5 class="card-title">FC Barcelona</h5>
-        <p class="card-text">This is my favorite football team</p>
-      </div>
-    </div>
-
-    <div class="card mb-3">
-      <img src="fcf.jpg" class="card-img-top" alt="3">
-      <div class="card-body">
-        <h5 class="card-title">FCF</h5>
-        <p class="card-text">This is my national football team</p>
-      </div>
-    </div>
-
-    <section class="news-section">
-      <h2>Latest News</h2>
-      <button id="fetchNewsBtn">Load News</button>
-      <div id="newsContainer"></div>
-    </section>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
